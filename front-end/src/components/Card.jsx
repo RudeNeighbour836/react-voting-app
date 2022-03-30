@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { useState } from 'react';
 import Card from "./CardUI";
 
+import img1 from './images/m/2.jpg'
+
 function Voting(){
     const [data, setData] =useState('');
     const [submitted, setSubmitted] =useState(false);
@@ -53,6 +55,7 @@ function Voting(){
                         <h2>Charirperson</h2>
                         <input type="radio" id="candidate" name ='Charirperson' value ='William' onChange={handleChange}/>
                         <label for="William">William</label><br></br>
+                        
                         <input type="radio" id="candidate" name ='Charirperson' value ='Jack' onChange={handleChange}/>
                         <label for="Jack">Jack</label><br></br>
                         <input type="radio" id="candidate" name ='Charirperson' value ='Loulou' onChange={handleChange}/>
@@ -114,7 +117,9 @@ function Voting(){
                 <center>
                 <input type='submit' value= 'submit'/>
                 </center>
+                
                 </form>
+                
                :
                 <p>Your Vote has been casted!
 
@@ -122,6 +127,7 @@ function Voting(){
                     <button><a href="http://localhost:4000/results">Results</a> </button>
                 </p>
                 }
+                
             </div> 
         );
 }
